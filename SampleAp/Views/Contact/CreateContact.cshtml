@@ -1,0 +1,86 @@
+﻿@model SampleAp.Data.Entities.Contact
+@{
+    HtmlHelper.ClientValidationEnabled = true;
+}
+<link href="~/Content/validationEngine.jquery.css" rel="stylesheet" />
+<script src="~/Scripts/jquery.validationEngine-en.js"></script>
+<script src="~/Scripts/jquery.validationEngine.js"></script>
+<script type="text/javascript">
+
+    $(function () {
+     
+        $("#frmcreateContacts").validationEngine();
+       
+        $("#DateOfBirth").datepicker({
+            dateFormat: 'mm/dd/yy',
+            changeYear: true,
+            changeMonth: true
+        });
+       
+    });
+
+    </script>
+<div class="col-md-12 message-box">
+    @using (Html.BeginForm("CreateContact", "Contact", FormMethod.Post, new { @id = "frmcreateContacts", @enctype = "multipart/form-data" }))
+    { 
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(m => m.Id)
+
+        
+        <div class="box-body">
+            <div class="row">
+                <section class="col-md-6">
+                    <label class="label">First Name</label>
+                    <label class="input">
+                        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control validate[required]", @placeholder = "First Name",@maxlength = 100 })
+                    </label>
+                </section>
+                <section class="col-md-6">
+                    <label class="label">Last Name</label>
+                    <label class="input">
+                        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control validate[required]", @placeholder = "Last Name",@maxlength = 100 })
+                    </label>
+                </section>
+            </div>
+
+            <div class="row">
+                <section class="col-md-6">
+                    <label class="label">Knick Name</label>
+                    <label class="input">
+                        @Html.TextBoxFor(m => m.Knickname, new { @class = "form-control", @placeholder = "Knick Name",@maxlength = 20 })
+                    </label>
+                </section>
+                <section class="col-md-6">
+                    <label class="label">Display As Format</label>
+                    <label class="input">
+                         @Html.DropDownListFor(m => m.MasterDisplayAsId, (SelectList)ViewBag.DisplayAs, "Select Display Format", new { @class = "form-control validate[required]", @tabindex = 4 })
+                    </label>
+                </section>
+            </div>
+
+            <div class="row">
+                <section class="col-md-6">
+                    <label class="label">Date Of Birth(MM/DD/YY)</label>
+                    <label class="input">
+                        @Html.TextBoxFor(m => m.DateOfBirth, new { @class = "form-control", @readonly="readonly" })
+                    </label>
+                </section>
+                <section class="col-md-6">
+                    <label class="label">Phone Number</label>
+                    <label class="input">
+                        @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control numericOnly validate[required]", @placeholder = "Phone Number",@maxlength = 30 })
+                    </label>
+                </section>
+            </div>
+        </div>
+        <footer>
+            <div class="row">
+                <div class="col-md-12">
+                <div class="pull-right">
+                    <button class="btn-u" type="submit">Save</button>
+                    <button class="btn-u btn-u-default" type="button" onclick="ClosePopUp();">Cancel</button>
+                </div></div>
+            </div>
+        </footer>
+    }
+</div>

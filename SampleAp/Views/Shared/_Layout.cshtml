@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="@Url.Content("~/Content/font-awesome.min.css")" rel="stylesheet">
+    <link href="@Url.Content("~/Content/style.css")" rel="stylesheet" type="text/css" />
+     <link href="@Url.Content("~/Content/jQueryUI/jquery-ui-1.10.3.custom.css")" rel="stylesheet">
+
+
+      <script src="http://code.jquery.com/jquery-1.12.3.js"></script>
+      <script src="@Url.Content("~/Scripts/jquery-ui.js")"></script>
+          <script src="@Url.Content("~/Scripts/Common.js")"></script>
+    
+
+</head>
+<body>
+    <header class="send-heder">
+        <h2>Sample Application - Contacts List</h2>
+    </header>
+    <div class="container">
+        <div class="row">
+
+            @RenderSection("featured", required: false)
+            @RenderBody()
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="content-wrapper">
+            <div class="text-center">
+                <p>&copy; @DateTime.Now.Year - Sample test application by CDN Software Solution Pvt. Ltd. </p>
+            </div>
+        </div>
+    </footer>
+       <div id="DivBody">
+        </div>
+    <div class="box loader-gb ">
+            <div id="divajaxload" class="loading-img ">
+                <i class="three-quarters spinner"></i>
+            </div>
+        </div>
+
+  
+    <script src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>
+    <link href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+</body>
+</html>

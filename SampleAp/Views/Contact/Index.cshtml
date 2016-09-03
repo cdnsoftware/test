@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div class="col-md-12 message-box">
+    <form class="sky-form" action="#">
+        <span>
+            <!-- general form elements Url.Action("Create","Page") -->
+            <a href="#" class="btn-u margin5" onclick="GetPopUp(0,'@Url.Action("CreateContact", "Contact")', 'Create new contact details ', 'Add');" ><i class="fa fa-fw fa-plus-circle"></i>Add Contact</a>   @**@
+            @try
+            {
+                if (!string.IsNullOrEmpty(TempData["Msg"].ToString()))
+                {
+                
+                <div class="box-body">
+                    <div class="alert alert-success alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h4><i class="icon fa fa-check"></i>Alert!</h4>
+                        @TempData["Msg"].ToString()
+                    </div>
+                </div>              
+                }
+            }
+            catch { }
+        </span>
+        <div class="box-body" id="SysmbolLst">
+            @Html.Action("ContactList")
+        </div>
+
+    </form>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        $('#example').DataTable();
+    });
+</script>

@@ -1,0 +1,104 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body{
+	background:#fff;
+}
+.text-p{
+    padding: 0;
+}
+.m10 {
+    margin-top: 18px;
+}
+nav {
+    text-align: right;
+}
+.header{
+	background:#337ab7;
+}
+h2{
+	color:#ffffff;
+}
+
+.text-control1 {
+    font-size: 20px;
+    color: #4e4e4e;
+}
+.text-control2 {
+    font-size: 15px;
+    font-weight: normal;
+}
+.text-con {
+    text-align: right;
+}
+.prev-btn{
+	margin:0;
+}
+.dataTables_info { width:40%; float:left;}
+.dataTables_paginate { width:40%; float:right;}
+#example_wrapper { margin:10px 0 0 0 ; display:inline-block; width:100%;}
+#example_wrapper .form-control { box-shadow:none; border-radius:0;}
+.notification_table th{ background:#337ab7; color:#fff;  font-weight:300 !important;border-bottom:0px !important;}
+.notification_table th:first-child { max-width:40px;}
+.notification_table th:nth-child(2) { max-width:70px;}
+.send-heder h2{ color:#444;  font-size:18px;
+padding:15px; margin:0 0 20px;}
+.Tokenize ,.TokensContainer{ width:100%; max-height:60px;}
+.Absensces-wrap {display: inline-block;
+    margin-bottom: 10px;width:100%;  }
+.Absensces-wrap input{ width:calc(100% - 50px); float:left;}
+.Absensces-wrap output  { height:35px; line-height:35px; width:40px; float:right; text-align:center; padding:0; border:1px solid #ccc;}
+.send-heder h2{ background:#337ab7; color:#fff;}
+.filter-box { max-width:650px;}
+
+.checkbox + .checkbox, .radio + .radio { margin-top:0;}
+.margin5
+{
+    margin:5px;
+}
+footer
+{ padding:15px 0; font-size:12px;
+ }
+.label{  color: #555 !important;
+    display: block;
+    font-size: 13px;
+    padding: 5px !important;
+    text-align: left;}
+.ui-dialog-titlebar-close{ display:none !important;}
+#example_length,#example_filter
+{ padding:0 5px;
+}
+#example_info
+{padding:10px 5px;
+}
+    #example_length select
+    { padding:5px; 
+     }
+#example_paginate
+{
+ width:auto; margin:10px 5px; padding:0; border:1px solid #ccc; }
+#example_paginate .paginate_button
+{ background:none; border:none ; border-left:1px solid #ccc; margin:0; 
+}
+    #example_paginate > .paginate_button:first-child
+    { border-left:none; 
+    }
+.ui-dialog .ui-dialog-title
+{ border-radius:0; color:#fff;
+}
+
+.message-box .input
+{ width:100%;
+}
+    .message-box .input input,.message-box .input select
+    { border-radius:0; font-weight:normal;
+    }
+.ui-datepicker-header
+{ margin:0; color:#fff;
+}
+.ui-datepicker-header .ui-corner-all
+{color:#fff;
+}
+    .ui-datepicker-header select
+    { font-weight:500; font-size:12px;
+    }
