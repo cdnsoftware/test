@@ -45,7 +45,7 @@ namespace SampleApProvider
         }
 
 
-        public List<vmContactList> GetAllNewTestContacts(int id = 0)
+        public List<IGrouping<string,vmContactList>> GetAllNewTestContacts(int id = 0)
         {
             List<vmContactList> modelLst = new List<vmContactList>();
             
@@ -60,11 +60,11 @@ namespace SampleApProvider
                     _context.Contacts.ToList().ForEach(x => modelLst.Add(ConvertContactTovmContactList(x))); //.OrderByDescending(x => x.Id).ToList();
                 }
 
-                return modelLst;
+                return modelLst.OrderBy(x=>x.LastName).GroupBy(x=> x.LastName.Substring(0,1)).ToList();
             }
             catch (Exception ex)
             {
-                return new List<vmContactList>();
+                return new List<IGrouping<string,vmContactList>>();
             }
         }
         private vmContactList ConvertContactTovmContactList(Contact model)
