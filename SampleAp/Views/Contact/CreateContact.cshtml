@@ -5,6 +5,7 @@
 <link href="~/Content/validationEngine.jquery.css" rel="stylesheet" />
 <script src="~/Scripts/jquery.validationEngine-en.js"></script>
 <script src="~/Scripts/jquery.validationEngine.js"></script>
+<script src="@Url.Content("~/Scripts/ContactFunctions.js")"></script>
 <script type="text/javascript">
 
     $(function () {
@@ -54,6 +55,7 @@
                     <label class="label">Display As Format</label>
                     <label class="input">
                          @Html.DropDownListFor(m => m.MasterDisplayAsId, (SelectList)ViewBag.DisplayAs, "Select Display Format", new { @class = "form-control validate[required]", @tabindex = 4 })
+                        <span id="Preview"></span>
                     </label>
                 </section>
             </div>
