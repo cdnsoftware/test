@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SampleApCore.ViewModels.vmContactList>
+﻿@model List<IGrouping<string, SampleApCore.ViewModels.vmContactList>>
 @using SampleAp.Models
 @{
     int i = 0;
@@ -7,6 +7,7 @@
 <table id="example" class="table table-striped notification_table table-bordered" cellspacing="0" width="100%">
     <thead>
         <tr>
+           
             <th>S.NO. </th>
             <th>First Name</th>
             <th>Last Name</th>
@@ -19,14 +20,24 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var group in Model)
         {
             <tr>
+                     <td colspan ="7">
+                    @group.Key.ToUpper()
+                </td>
+            </tr>
+            foreach (var item in group)
+            {
+           
+            <tr>
+               
+
                 <td>@(i + 1)</td>
                 <td>@item.FirstName</td>
                 <td>@item.LastName</td>
                 <td>@item.Knickname</td>
-                
+
                 <td>@item.DisplayASSetting ( @item.DisplayAs_)</td>
                 <td>@(string.Format("{0:dd/MM/yyyy}", item.DateOfBirth))</td>
                 <td>@item.PhoneNumber</td>
@@ -38,7 +49,10 @@
 
                 </td>
             </tr>
-            i++;
+                i++;
+            }
+
+
         }
 
     </tbody>
