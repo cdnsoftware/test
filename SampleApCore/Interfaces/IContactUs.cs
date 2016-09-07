@@ -5,12 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using SampleAp.Data;
 using SampleAp.Data.Entities;
+using SampleApCore.ViewModels;
 
 namespace SampleApCore.Interfaces
 {
     public interface IContactUs
     {
         List<Contact> GetAllContacts(int id = 0);
+        List<vmContactList> GetAllNewTestContacts(int id = 0);
         vmTransactionResult<Contact> CreateContact(Contact model);
         vmTransactionResult<bool> DeleteContact(int id);
     }

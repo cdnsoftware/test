@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using SampleAp.Data.Entities;
 using SampleApCore.Interfaces;
+using SampleApCore.ViewModels;
 
 namespace SampleAp.Controllers
 {
@@ -49,7 +50,7 @@ namespace SampleAp.Controllers
         {
             try
             {
-                var lst = contact.GetAllContacts();
+                var lst = contact.GetAllNewTestContacts();
                 return PartialView(lst);
             }
             catch

@@ -42,6 +42,8 @@
     <Compile Include="Interfaces\ICommon.cs" />
     <Compile Include="Interfaces\IContactUs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\vmContactList.cs" />
+    <Compile Include="ViewModels\vmICommon.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SampleAp.Data\SampleAp.Data.csproj">

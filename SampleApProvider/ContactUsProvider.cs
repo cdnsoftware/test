@@ -9,6 +9,7 @@ using SampleAp.Data;
 using SampleAp.Data.Entities;
 using System.Data;
 using System.Data.Entity;
+using SampleApCore.ViewModels;
 
 namespace SampleApProvider
 {
@@ -24,6 +25,8 @@ namespace SampleApProvider
 
         public List<Contact> GetAllContacts(int id = 0)
         {
+         //
+
             try
             {
                 if (id > 0)
@@ -39,6 +42,64 @@ namespace SampleApProvider
             {
                 return new List<Contact>();
             }
+        }
+
+
+        public List<vmContactList> GetAllNewTestContacts(int id = 0)
+        {
+            List<vmContactList> modelLst = new List<vmContactList>();
+            
+            try
+            {
+                if (id > 0)
+                {
+                    _context.Contacts.Where(x => x.Id == id).ToList().ForEach(x => modelLst.Add(ConvertContactTovmContactList(x)));
+                }
+                else
+                {
+                    _context.Contacts.ToList().ForEach(x => modelLst.Add(ConvertContactTovmContactList(x))); //.OrderByDescending(x => x.Id).ToList();
+                }
+
+                return modelLst;
+            }
+            catch (Exception ex)
+            {
+                return new List<vmContactList>();
+            }
+        }
+        private vmContactList ConvertContactTovmContactList(Contact model)
+        {
+            return new vmContactList()
+            {
+                 Id = model.Id,
+                  FirstName = model.FirstName,
+                   LastName = model.LastName,
+                    DateOfBirth = model.DateOfBirth,
+                     Knickname = model.Knickname,
+                      PhoneNumber = model.PhoneNumber,
+                      DisplayAs_ = model.MasterDisplayAsList.DisplayAs,
+                       DisplayASSetting = GetDisplayNameBySetting(model)
+            };
+        }
+
+        private string GetDisplayNameBySetting(Contact item)
+        {
+            var varDisplayAs = "";
+
+            if (item.MasterDisplayAsId == (int)vmICommon.eDisplayAs.FirstLast)
+            {
+                varDisplayAs = item.FirstName + " " + item.LastName;
+            }
+            else if (item.MasterDisplayAsId == (int)vmICommon.eDisplayAs.LastFirst)
+            {
+                varDisplayAs = item.LastName + " " + item.FirstName;
+            }
+            else if (item.MasterDisplayAsId == (int)vmICommon.eDisplayAs.Knickname)
+            {
+                varDisplayAs = item.Knickname;
+            }
+
+            return varDisplayAs;
         }
 
         public vmTransactionResult<Contact> CreateContact(Contact model)

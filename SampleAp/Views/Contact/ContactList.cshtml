@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SampleAp.Data.Entities.Contact>
+﻿@model IEnumerable<SampleApCore.ViewModels.vmContactList>
 @using SampleAp.Models
 @{
     int i = 0;
@@ -26,23 +26,8 @@
                 <td>@item.FirstName</td>
                 <td>@item.LastName</td>
                 <td>@item.Knickname</td>
-                @{
-                        var varDisplayAs = "";
-
-                        if (item.MasterDisplayAsId == (int)vmCommon.eDisplayAs.FirstLast)
-                        {
-                            varDisplayAs = item.FirstName + " " + item.LastName ;
-                        }
-                        else if (item.MasterDisplayAsId == (int)vmCommon.eDisplayAs.LastFirst)
-                        {
-                            varDisplayAs = item.LastName + " " + item.FirstName;
-                        }
-                        else if (item.MasterDisplayAsId == (int)vmCommon.eDisplayAs.Knickname)
-                        {
-                            varDisplayAs = item.Knickname ;
-                        }
-                }
-                <td>@varDisplayAs ( @item.MasterDisplayAsList.DisplayAs)</td>
+                
+                <td>@item.DisplayASSetting ( @item.DisplayAs_)</td>
                 <td>@(string.Format("{0:dd/MM/yyyy}", item.DateOfBirth))</td>
                 <td>@item.PhoneNumber</td>
                 <td>
