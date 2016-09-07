@@ -138,12 +138,6 @@ D:\github_sampleapp\SampleAp.Tests\bin\Debug\SampleAp.Data.pdb
 D:\github_sampleapp\SampleAp.Tests\bin\Debug\SampleApCore.pdb
 D:\github_sampleapp\SampleAp.Tests\bin\Debug\SampleApProvider.pdb
 D:\github_sampleapp\SampleAp.Tests\bin\Debug\SampleAp.pdb
-D:\github_sampleapp\SampleAp.Tests\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
-D:\github_sampleapp\SampleAp.Tests\bin\Debug\Microsoft.Practices.ServiceLocation.xml
-D:\github_sampleapp\SampleAp.Tests\bin\Debug\Microsoft.Practices.Unity.xml
-D:\github_sampleapp\SampleAp.Tests\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
-D:\github_sampleapp\SampleAp.Tests\bin\Debug\Microsoft.Practices.Unity.Mvc.xml
-D:\github_sampleapp\SampleAp.Tests\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
 D:\github_sampleapp\SampleAp.Tests\bin\Debug\Newtonsoft.Json.xml
 D:\github_sampleapp\SampleAp.Tests\bin\Debug\System.Net.Http.Formatting.xml
 D:\github_sampleapp\SampleAp.Tests\bin\Debug\System.Web.Http.xml

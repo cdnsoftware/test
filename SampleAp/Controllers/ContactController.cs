@@ -8,7 +8,7 @@ using SampleApCore.Interfaces;
 
 namespace SampleAp.Controllers
 {
-    public class ContactController : Controller
+    public class ContactController : BaseController
     {
         private readonly IContactUs contact;
         private readonly ICommon common;
@@ -17,7 +17,16 @@ namespace SampleAp.Controllers
         {
             contact = _contact;
             common = _common;
-        }         
+        }
+
+        public ActionResult ExceptionTest()
+        {
+            // on exception will be redirected to base controller OnException Action
+            
+            throw new InvalidOperationException("Something went wrong");
+        }
+
+       
         
         /// <summary>
       /// Method : GET hold the partial view to display all the contacts

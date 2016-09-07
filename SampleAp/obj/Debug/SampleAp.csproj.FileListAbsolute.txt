@@ -145,8 +145,6 @@ D:\github_sampleapp\SampleAp\bin\SampleApCore.pdb
 D:\github_sampleapp\SampleAp\bin\SampleApProvider.pdb
 D:\github_sampleapp\SampleAp\bin\EntityFramework.xml
 D:\github_sampleapp\SampleAp\bin\EntityFramework.SqlServer.xml
-D:\github_sampleapp\SampleAp\bin\Microsoft.Practices.ServiceLocation.pdb
-D:\github_sampleapp\SampleAp\bin\Microsoft.Practices.ServiceLocation.xml
 D:\github_sampleapp\SampleAp\bin\Microsoft.Practices.Unity.xml
 D:\github_sampleapp\SampleAp\bin\Microsoft.Practices.Unity.Configuration.xml
 D:\github_sampleapp\SampleAp\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml

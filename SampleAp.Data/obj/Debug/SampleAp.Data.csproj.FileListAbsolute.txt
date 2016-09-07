@@ -51,6 +51,5 @@ D:\github_sampleapp\SampleAp.Data\bin\Debug\System.Web.WebPages.Deployment.xml
 D:\github_sampleapp\SampleAp.Data\bin\Debug\System.Web.WebPages.Razor.xml
 D:\github_sampleapp\SampleAp.Data\bin\Debug\WebMatrix.Data.xml
 D:\github_sampleapp\SampleAp.Data\bin\Debug\WebMatrix.WebData.xml
-D:\github_sampleapp\SampleAp.Data\obj\Debug\SampleAp.Data.csprojResolveAssemblyReference.cache
 D:\github_sampleapp\SampleAp.Data\obj\Debug\SampleAp.Data.dll
 D:\github_sampleapp\SampleAp.Data\obj\Debug\SampleAp.Data.pdb
